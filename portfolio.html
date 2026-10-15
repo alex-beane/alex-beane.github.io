@@ -6,17 +6,24 @@
   <title>Portfolio | Alex Beane</title>
   <meta name="description" content="Selected GIS projects by Alex Beane: spatial analysis, cartography, and geospatial data work.">
   <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
 </head>
 <body>
 
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="index.html">Alex Beane</a>
-      <nav class="nav" aria-label="Main">
-        <a href="index.html">Home</a>
-        <a href="portfolio.html" aria-current="page">Portfolio</a>
-        <a href="resume.html">Résumé</a>
-      </nav>
+      <div class="header-actions">
+        <nav class="nav" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="portfolio.html" aria-current="page">Portfolio</a>
+          <a href="resume.html">Résumé</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -33,68 +40,273 @@
     </div>
 
     <div class="wrap">
-      <div class="projects">
 
-        <!-- PROJECT 1
-             To add a map image: put it in /images and place
-             <img src="images/project-one.jpg" alt="Describe the map"> inside the .thumb div. -->
-        <article class="project">
-          <div class="thumb" role="img" aria-label="Placeholder for project map"></div>
-          <div class="project-body">
-            <p class="project-meta">Spatial analysis &middot; 2026</p>
-            <h3>Project title one</h3>
-            <p>
-              [2 to 3 sentences: the question you were answering, the data you used,
-              your method, and what the result showed or enabled.]
-            </p>
-            <ul class="tags">
-              <li>ArcGIS Pro</li>
-              <li>Python</li>
-              <li>Suitability analysis</li>
-            </ul>
-            <a class="project-link" href="#">View project &rarr;</a>
-          </div>
-        </article>
-
-        <!-- PROJECT 2 -->
-        <article class="project">
-          <div class="thumb" role="img" aria-label="Placeholder for project map"></div>
-          <div class="project-body">
-            <p class="project-meta">Cartography &middot; 2025</p>
-            <h3>Project title two</h3>
-            <p>
-              [2 to 3 sentences: the audience, the design choices you made, and
-              how the map or story communicates its message.]
-            </p>
-            <ul class="tags">
-              <li>QGIS</li>
-              <li>Cartographic design</li>
-              <li>Web map</li>
-            </ul>
-            <a class="project-link" href="#">View project &rarr;</a>
-          </div>
-        </article>
-
-        <!-- PROJECT 3 -->
-        <article class="project">
-          <div class="thumb" role="img" aria-label="Placeholder for project map"></div>
-          <div class="project-body">
-            <p class="project-meta">Remote sensing &middot; 2025</p>
-            <h3>Project title three</h3>
-            <p>
-              [2 to 3 sentences: imagery or sensor source, the processing workflow,
-              and the insight or product that came out of it.]
-            </p>
-            <ul class="tags">
-              <li>Google Earth Engine</li>
-              <li>Raster analysis</li>
-              <li>R</li>
-            </ul>
-            <a class="project-link" href="#">View project &rarr;</a>
-          </div>
-        </article>
-
+      <div class="portfolio-tools">
+        <ul class="jump-links" aria-label="Project categories">
+          <li><a href="#web-gis">Web-based GIS Applications</a></li>
+          <li><a href="#analysis">Geospatial Analysis</a></li>
+          <li><a href="#cartography">Map Products, Cartography &amp; Geovisualization</a></li>
+        </ul>
+        <button class="text-btn" type="button" id="toggle-all">Expand all</button>
       </div>
+
+      <!-- ==========================================================
+           HOW TO ADD A PROJECT
+           Copy any <details class="panel"> block below into the category
+           it belongs to, then change its id, title, text and links.
+           - Add the word "open" to <details> to start a panel expanded.
+           - To show a real map or screenshot, save it in /images and put
+             <img src="images/your-image.jpg" alt="Describe the map">
+             inside the .thumb div (replace the empty div's contents).
+           - No image? Delete the .thumb div and add class "no-media"
+             to .panel-body.
+           Link a panel directly with portfolio.html#its-id
+           ========================================================== -->
+
+      <!-- ================= CATEGORY 1 ================= -->
+      <section class="category" id="web-gis">
+        <div class="category-head">
+          <p class="eyebrow">01</p>
+          <h2>Web-based GIS Applications</h2>
+          <p>[One sentence on this category: the kinds of web maps, dashboards, and apps you build.]</p>
+        </div>
+
+        <div class="panel-list">
+
+          <details class="panel" id="web-gis-1" open>
+            <summary>
+              <div class="panel-head">
+                <p class="panel-meta">Web app &middot; 2026</p>
+                <h3>Web application title one</h3>
+                <p class="panel-summary">[One-line summary: what the app does and who uses it.]</p>
+              </div>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="panel-body">
+              <div class="thumb" role="img" aria-label="Placeholder for project screenshot"></div>
+              <div class="panel-text">
+                <p>
+                  [2 to 3 sentences: the problem or need, how you designed and built the
+                  application, and what users can do with it.]
+                </p>
+                <dl class="detail-list">
+                  <div><dt>Role</dt><dd>[Your role]</dd></div>
+                  <div><dt>Timeline</dt><dd>[Dates or duration]</dd></div>
+                  <div><dt>Data</dt><dd>[Data sources]</dd></div>
+                  <div><dt>Outcome</dt><dd>[Impact or result]</dd></div>
+                </dl>
+                <ul class="tags">
+                  <li>ArcGIS Enterprise</li>
+                  <li>Experience Builder</li>
+                  <li>JavaScript</li>
+                </ul>
+                <div class="panel-links">
+                  <a class="btn" href="#">Live app</a>
+                  <a class="btn ghost" href="#">Source code</a>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="panel" id="web-gis-2">
+            <summary>
+              <div class="panel-head">
+                <p class="panel-meta">Dashboard &middot; 2025</p>
+                <h3>Web application title two</h3>
+                <p class="panel-summary">[One-line summary: what the app does and who uses it.]</p>
+              </div>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="panel-body">
+              <div class="thumb" role="img" aria-label="Placeholder for project screenshot"></div>
+              <div class="panel-text">
+                <p>
+                  [2 to 3 sentences: the problem or need, how you designed and built the
+                  application, and what users can do with it.]
+                </p>
+                <dl class="detail-list">
+                  <div><dt>Role</dt><dd>[Your role]</dd></div>
+                  <div><dt>Timeline</dt><dd>[Dates or duration]</dd></div>
+                  <div><dt>Data</dt><dd>[Data sources]</dd></div>
+                  <div><dt>Outcome</dt><dd>[Impact or result]</dd></div>
+                </dl>
+                <ul class="tags">
+                  <li>ArcGIS Online</li>
+                  <li>Dashboards</li>
+                  <li>Python</li>
+                </ul>
+                <div class="panel-links">
+                  <a class="btn" href="#">Live app</a>
+                </div>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <!-- ================= CATEGORY 2 ================= -->
+      <section class="category" id="analysis">
+        <div class="category-head">
+          <p class="eyebrow">02</p>
+          <h2>Geospatial Analysis</h2>
+          <p>[One sentence on this category: the analytical questions you work on and the methods you use.]</p>
+        </div>
+
+        <div class="panel-list">
+
+          <details class="panel" id="analysis-1">
+            <summary>
+              <div class="panel-head">
+                <p class="panel-meta">Spatial analysis &middot; 2026</p>
+                <h3>Analysis project title one</h3>
+                <p class="panel-summary">[One-line summary: the question you answered and the main finding.]</p>
+              </div>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="panel-body">
+              <div class="thumb" role="img" aria-label="Placeholder for project map"></div>
+              <div class="panel-text">
+                <p>
+                  [2 to 3 sentences: the question you were answering, the data you used,
+                  your method, and what the result showed or enabled.]
+                </p>
+                <dl class="detail-list">
+                  <div><dt>Role</dt><dd>[Your role]</dd></div>
+                  <div><dt>Timeline</dt><dd>[Dates or duration]</dd></div>
+                  <div><dt>Data</dt><dd>[Data sources]</dd></div>
+                  <div><dt>Outcome</dt><dd>[Impact or result]</dd></div>
+                </dl>
+                <ul class="tags">
+                  <li>ArcGIS Pro</li>
+                  <li>Python</li>
+                  <li>Suitability analysis</li>
+                </ul>
+                <div class="panel-links">
+                  <a class="btn" href="#">Read the full write-up</a>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="panel" id="analysis-2">
+            <summary>
+              <div class="panel-head">
+                <p class="panel-meta">Remote sensing &middot; 2025</p>
+                <h3>Analysis project title two</h3>
+                <p class="panel-summary">[One-line summary: the question you answered and the main finding.]</p>
+              </div>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="panel-body">
+              <div class="thumb" role="img" aria-label="Placeholder for project map"></div>
+              <div class="panel-text">
+                <p>
+                  [2 to 3 sentences: imagery or sensor source, the processing workflow,
+                  and the insight or product that came out of it.]
+                </p>
+                <dl class="detail-list">
+                  <div><dt>Role</dt><dd>[Your role]</dd></div>
+                  <div><dt>Timeline</dt><dd>[Dates or duration]</dd></div>
+                  <div><dt>Data</dt><dd>[Data sources]</dd></div>
+                  <div><dt>Outcome</dt><dd>[Impact or result]</dd></div>
+                </dl>
+                <ul class="tags">
+                  <li>Google Earth Engine</li>
+                  <li>Raster analysis</li>
+                  <li>R</li>
+                </ul>
+                <div class="panel-links">
+                  <a class="btn" href="#">Read the full write-up</a>
+                </div>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <!-- ================= CATEGORY 3 ================= -->
+      <section class="category" id="cartography">
+        <div class="category-head">
+          <p class="eyebrow">03</p>
+          <h2>Map Products, Cartography, and Geovisualization</h2>
+          <p>[One sentence on this category: the maps and visual stories you design, and for whom.]</p>
+        </div>
+
+        <div class="panel-list">
+
+          <details class="panel" id="cartography-1">
+            <summary>
+              <div class="panel-head">
+                <p class="panel-meta">Cartography &middot; 2025</p>
+                <h3>Map product title one</h3>
+                <p class="panel-summary">[One-line summary: the audience and the message of the map.]</p>
+              </div>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="panel-body">
+              <div class="thumb" role="img" aria-label="Placeholder for map"></div>
+              <div class="panel-text">
+                <p>
+                  [2 to 3 sentences: the audience, the design choices you made, and
+                  how the map or story communicates its message.]
+                </p>
+                <dl class="detail-list">
+                  <div><dt>Role</dt><dd>[Your role]</dd></div>
+                  <div><dt>Timeline</dt><dd>[Dates or duration]</dd></div>
+                  <div><dt>Data</dt><dd>[Data sources]</dd></div>
+                  <div><dt>Format</dt><dd>[Print poster, web map, story map, etc.]</dd></div>
+                </dl>
+                <ul class="tags">
+                  <li>QGIS</li>
+                  <li>Cartographic design</li>
+                  <li>Adobe Illustrator</li>
+                </ul>
+                <div class="panel-links">
+                  <a class="btn" href="#">View full map</a>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="panel" id="cartography-2">
+            <summary>
+              <div class="panel-head">
+                <p class="panel-meta">Geovisualization &middot; 2025</p>
+                <h3>Map product title two</h3>
+                <p class="panel-summary">[One-line summary: the audience and the message of the visualization.]</p>
+              </div>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="panel-body">
+              <div class="thumb" role="img" aria-label="Placeholder for visualization"></div>
+              <div class="panel-text">
+                <p>
+                  [2 to 3 sentences: what the visualization shows, how you encoded the
+                  data, and what viewers should take away.]
+                </p>
+                <dl class="detail-list">
+                  <div><dt>Role</dt><dd>[Your role]</dd></div>
+                  <div><dt>Timeline</dt><dd>[Dates or duration]</dd></div>
+                  <div><dt>Data</dt><dd>[Data sources]</dd></div>
+                  <div><dt>Format</dt><dd>[Story map, interactive map, animation, etc.]</dd></div>
+                </dl>
+                <ul class="tags">
+                  <li>ArcGIS StoryMaps</li>
+                  <li>Web map</li>
+                  <li>Data visualization</li>
+                </ul>
+                <div class="panel-links">
+                  <a class="btn" href="#">View project</a>
+                </div>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </section>
+
     </div>
   </main>
 
@@ -108,6 +320,34 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Expand/collapse all panels, and open a panel when linked by #id
+    (function () {
+      var panels = Array.prototype.slice.call(document.querySelectorAll('details.panel'));
+      var btn = document.getElementById('toggle-all');
+
+      function sync() {
+        var allOpen = panels.every(function (p) { return p.open; });
+        btn.textContent = allOpen ? 'Collapse all' : 'Expand all';
+      }
+      function openFromHash() {
+        var id = location.hash.slice(1);
+        var el = id && document.getElementById(id);
+        if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView(); }
+      }
+
+      btn.addEventListener('click', function () {
+        var allOpen = panels.every(function (p) { return p.open; });
+        panels.forEach(function (p) { p.open = !allOpen; });
+        sync();
+      });
+      panels.forEach(function (p) { p.addEventListener('toggle', sync); });
+      window.addEventListener('hashchange', openFromHash);
+      openFromHash();
+      sync();
+    })();
+  </script>
 
 </body>
 </html>

@@ -6,17 +6,24 @@
   <title>Alex Beane | GIS Professional</title>
   <meta name="description" content="Portfolio of Alex Beane, a GIS professional specializing in spatial analysis, cartography, and geospatial data.">
   <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
 </head>
 <body>
 
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="index.html">Alex Beane</a>
-      <nav class="nav" aria-label="Main">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="resume.html">Résumé</a>
-      </nav>
+      <div class="header-actions">
+        <nav class="nav" aria-label="Main">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="resume.html">Résumé</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -118,7 +125,7 @@
     <div class="wrap">
       <span>&copy; 2026 Alex Beane</span>
       <div class="footer-links">
-        <a href="mailto:aavbeane@gmail.com.com">Email</a>
+        <a href="mailto:aavbeane@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/beanealex" rel="noopener">LinkedIn</a>
         <a href="https://github.com/alex-beane" rel="noopener">GitHub</a>
       </div>
