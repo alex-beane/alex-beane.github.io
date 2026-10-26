@@ -34,7 +34,7 @@
         <h1>Selected projects</h1>
         <p class="lede">
           These projects show how I approach spatial problems, from data
-          preparation to analysis to the final deliverable.
+          preparation, to analysis, to the final deliverable.
         </p>
       </div>
     </div>
@@ -60,6 +60,12 @@
                <div class="thumb"><img src="images/your-image.jpg" alt="Describe the map"></div>
              The image is shown at its natural proportions (never stretched
              or cropped), scaled to the width of its column.
+           - More than one image in a panel? Put all the .thumb divs inside
+             one wrapper so they stack in the image column:
+               <div class="panel-media">
+                 <div class="thumb"><img src="images/first.png" alt="..."></div>
+                 <div class="thumb"><img src="images/second.png" alt="..."></div>
+               </div>
            - Wide screenshot (like 1920x1080)? Add class "stacked" to
              .panel-body, i.e. <div class="panel-body stacked">, to show the
              image full-width above the text so it is easy to read.
@@ -121,11 +127,16 @@
               <span class="chevron" aria-hidden="true"></span>
             </summary>
             <div class="panel-body">
-              <div class="thumb" role="img"><img src="images/Portfolio/01/02-Thumbnail.png" alt="Project screenshot"></div>
-              <div class="thumb" role="img"><img src="images/Portfolio/01/02-ExperienceBuilder.png" alt="Project screenshot"></div>
+              <div class="panel-media">
+                <div class="thumb" role="img"><img src="images/Portfolio/01/02-Thumbnail.png" alt="Project screenshot"></div>
+                <div class="thumb" role="img"><img src="images/Portfolio/01/02-ExperienceBuilder.png" alt="Project screenshot"></div>
+              </div>
               <div class="panel-text">
                 <p>
-                  After the City's Visitor Center ruled out costly commercial guestbook software, I utilized existing City GIS tools and infrastructure to develop a working alternative. A dashboard visualizes points as visitors add them on the main lobby TV, and the Experience Builder app powered by Survey123 allows guests to input their information and view the map freely. (Internal use only, no live link available.)
+                  After the City's Visitor Center ruled out costly commercial guestbook software, I utilized existing City GIS tools and infrastructure to develop a working alternative. A dashboard visualizes points as visitors add them on the main lobby TV, and the Experience Builder app powered by Survey123 allows guests to input their information and view the map freely.
+                </p>
+                <p>
+                  <em>Internal use only. No live link available.</em>
                 </p>
                 <dl class="detail-list">
                   <div><dt>Role</dt><dd>GIS Technician Intern</dd></div>
@@ -148,30 +159,33 @@
               <div class="panel-head">
                 <p class="panel-meta">Web app</p>
                 <h3>City of College Station Interactive Map</h3>
-                <p class="panel-summary">[One-line summary: what the app does and who uses it.]</p>
+                <p class="panel-summary">A comprehensive web application for useful spatial information relevant to the City of College Station.</p>
               </div>
               <span class="chevron" aria-hidden="true"></span>
             </summary>
             <div class="panel-body">
-              <div class="thumb" role="img" aria-label="Placeholder for project screenshot"></div>
+              <div class="thumb" role="img" aria-label="Placeholder for project screenshot"><img src="images/Portfolio/01/03-Thumbnail.png" alt="Project screenshot"></div>
               <div class="panel-text">
                 <p>
-                  [2 to 3 sentences: the problem or need, how you designed and built the
-                  application, and what users can do with it.]
+                  One of the very first tasks I was assigned with the City of College Station was updating the City's interactive map, which had not been updated since 2018 and was very dated. This was designed as a broader informational map, and includes useful layers such as parks, sanitation collection schedules, and aerial imagery. This project gave me a great introduction into how content interacts with each other in an Enterprise GIS environment and how to effectively publish to ArcGIS REST Services.
+                </p>
+                <p>
+                  This project also features our first implementation of our User Guide initiative. The User Guide, which I also developed, is designed as a simple, easy-to-read informational about the features of the web app and how to use them.
                 </p>
                 <dl class="detail-list">
-                  <div><dt>Role</dt><dd>[Your role]</dd></div>
-                  <div><dt>Timeline</dt><dd>[Dates or duration]</dd></div>
-                  <div><dt>Data</dt><dd>[Data sources]</dd></div>
-                  <div><dt>Outcome</dt><dd>[Impact or result]</dd></div>
+                  <div><dt>Role</dt><dd>GIS Technician Intern</dd></div>
+                  <div><dt>Timeline</dt><dd>2025</dd></div>
+                  <div><dt>Data</dt><dd>City of College Station</dd></div>
+                  <div><dt>Outcome</dt><dd>An updated interactive map for the City of College Station which enhances public access to the City's GIS.</dd></div>
                 </dl>
                 <ul class="tags">
                   <li>ArcGIS Online</li>
-                  <li>Dashboards</li>
-                  <li>Python</li>
+                  <li>Experience Builder</li>
+                  <li>REST Services</li>
+                  <li>ArcGIS Enterprise</li>
                 </ul>
                 <div class="panel-links">
-                  <a class="btn" href="#">Live app</a>
+                  <a class="btn" href="https://experience.arcgis.com/experience/9468b19d6be24052a055728d7d8d9d63">Live app</a>
                 </div>
               </div>
             </div>

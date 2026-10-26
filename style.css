@@ -348,6 +348,10 @@ section { padding: 64px 0; border-top: 1px solid var(--rule); }
 /* Image on top at full width, text below. Best for wide screenshots (e.g. 1920x1080). */
 .panel-body.stacked { grid-template-columns: 1fr; }
 
+/* Several images in one panel: wrap them in <div class="panel-media">.
+   They stack top to bottom in the image column, each at its own natural proportions. */
+.panel-media { display: grid; gap: 16px; align-content: start; min-width: 0; }
+
 .thumb {
   border: 1px solid var(--rule);
   overflow: hidden;
