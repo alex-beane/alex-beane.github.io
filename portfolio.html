@@ -55,9 +55,14 @@
            Copy any <details class="panel"> block below into the category
            it belongs to, then change its id, title, text and links.
            - Add the word "open" to <details> to start a panel expanded.
-           - To show a real map or screenshot, save it in /images and put
-             <img src="images/your-image.jpg" alt="Describe the map">
-             inside the .thumb div (replace the empty div's contents).
+           - To show a real map or screenshot, save it in /images and replace
+             the placeholder line with:
+               <div class="thumb"><img src="images/your-image.jpg" alt="Describe the map"></div>
+             The image is shown at its natural proportions (never stretched
+             or cropped), scaled to the width of its column.
+           - Wide screenshot (like 1920x1080)? Add class "stacked" to
+             .panel-body, i.e. <div class="panel-body stacked">, to show the
+             image full-width above the text so it is easy to read.
            - No image? Delete the .thumb div and add class "no-media"
              to .panel-body.
            Link a panel directly with portfolio.html#its-id
@@ -78,12 +83,12 @@
               <div class="panel-head">
                 <p class="panel-meta">Web app</p>
                 <h3>Economic Development Map</h3>
-                <p class="panel-summary">A web application designed to visualize economic development initiatives across the city.</p>
+                <p class="panel-summary">A web application designed to visualize economic development initiatives across the City.</p>
               </div>
               <span class="chevron" aria-hidden="true"></span>
             </summary>
             <div class="panel-body">
-              <div class="thumb" role="img" aria-label="Placeholder for project screenshot"></div>
+              <div class="thumb" role="img" aria-label="Placeholder for project screenshot"><img src="images/Portfolio/01/01-Thumbnail.png" alt="Screenshot of the Economic Development Map"></div>
               <div class="panel-text">
                 <p>
                   Economic Development approached IT with a need to visualize the City's economic development initiatives in a web application. I designed and built an ArcGIS Experience Builder application that allows users to explore the City's initiatives (tax zones, development districts) and view related details. The app is used by both the public and internal staff to track progress and inform decision-making.
@@ -109,8 +114,40 @@
           <details class="panel" id="web-gis-2">
             <summary>
               <div class="panel-head">
-                <p class="panel-meta">Dashboard</p>
-                <h3>Web application title two</h3>
+                <p class="panel-meta">Dashboard and Web app</p>
+                <h3>Visitor Center Digital Guestbook Solution</h3>
+                <p class="panel-summary">A web app pipeline for managing and visualizing guestbook entries at the Visitor Center.</p>
+              </div>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="panel-body">
+              <div class="thumb" role="img"><img src="images/Portfolio/01/02-Thumbnail.png" alt="Project screenshot"></div>
+              <div class="thumb" role="img"><img src="images/Portfolio/01/02-ExperienceBuilder.png" alt="Project screenshot"></div>
+              <div class="panel-text">
+                <p>
+                  After the City's Visitor Center ruled out costly commercial guestbook software, I utilized existing City GIS tools and infrastructure to develop a working alternative. A dashboard visualizes points as visitors add them on the main lobby TV, and the Experience Builder app powered by Survey123 allows guests to input their information and view the map freely. (Internal use only, no live link available.)
+                </p>
+                <dl class="detail-list">
+                  <div><dt>Role</dt><dd>GIS Technician Intern</dd></div>
+                  <div><dt>Timeline</dt><dd>2025</dd></div>
+                  <div><dt>Data</dt><dd>City of College Station</dd></div>
+                  <div><dt>Outcome</dt><dd>An impactful alternative to expensive software that allows the visitor center to have an interactive element with guests and digitally manage/export guest information.</dd></div>
+                </dl>
+                <ul class="tags">
+                  <li>ArcGIS Online</li>
+                  <li>Dashboards</li>
+                  <li>Experience Builder</li>
+                  <li>Survey123</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <details class="panel" id="web-gis-3">
+            <summary>
+              <div class="panel-head">
+                <p class="panel-meta">Web app</p>
+                <h3>City of College Station Interactive Map</h3>
                 <p class="panel-summary">[One-line summary: what the app does and who uses it.]</p>
               </div>
               <span class="chevron" aria-hidden="true"></span>
@@ -157,7 +194,7 @@
             <summary>
               <div class="panel-head">
                 <p class="panel-meta">Spatial analysis</p>
-                <h3>Analysis project title one</h3>
+                <h3>Fire Department Accreditation</h3>
                 <p class="panel-summary">[One-line summary: the question you answered and the main finding.]</p>
               </div>
               <span class="chevron" aria-hidden="true"></span>
@@ -238,7 +275,7 @@
             <summary>
               <div class="panel-head">
                 <p class="panel-meta">Cartography</p>
-                <h3>Map product title one</h3>
+                <h3>Proposed Restricted Overnight Parking Areas - Open House</h3>
                 <p class="panel-summary">[One-line summary: the audience and the message of the map.]</p>
               </div>
               <span class="chevron" aria-hidden="true"></span>
